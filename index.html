@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptafor</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <header>
+        <img src="img/alura-logo.svg" alt="logo de alura">
+    </header>
+
+    <main>
+        <section class="container">
+
+            <!-- textarea que recibe el texto -->
+            <form class="defect form" action="#">
+
+                <textarea name="textarea" id="textarea" cols="30" rows="10" placeholder="Ingrese el texto aquí"></textarea>
+                <p id="alert"> <img src="img/exlamacion.png" alt="!"> solo letras minusculas y sin acentos</p>
+
+                <div class="buttons">
+                    <input id="encrypt" type="button" value="Encriptar">
+                    <input id="decrypt" type="button" value="Desencriptar" >
+                </div>
+            </form>
+
+            <article class="aside">
+                <section class="defect" id="defect">
+                    <img src="img/Muñeco.png" alt="muñeco">
+                    <h3>Ningún mensaje fue <br>encontrado.</h3>
+                    <p>Ingresa el texto que deseas encriptar o <br>desencriptar</p>
+                </section>
+
+                <!-- textarea que muestra el valor encriptado o desencriptado -->
+                <section class="defect hidden" id="result">
+              
+                        <textarea name="text" id="salida" cols="30" rows="10" disabled></textarea>
+                        <input id="copy" type="button" value="Copiar">
+
+                </section>
+
+            </article>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; derechos de autor para Cristian Camilo Lopez || Alura+ORACLE</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
