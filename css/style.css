@@ -50,10 +50,28 @@ form{
     width: 70%;
 }
 
+.enc{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.enc p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
 form textarea{
     width: 70%;
     border-color: none;
     resize: none;
+    min-height: 50px;
+    max-height: 300px;
+    height: auto;
     padding: 20px 20px;
     background: transparent;
     font-size: 20px;
