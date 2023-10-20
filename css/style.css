@@ -17,17 +17,11 @@
 
 body{
     background: var(--gray-200);
+    overflow-x: hidden;
 }
+
 
 /* ------------- estilos del header o logo ---------------- */
-
-main{
-    display: block;
-    margin: 0 auto;
-    max-width: 1440px;
-    height: auto;
-}
-
 header{
     width: 60%;
 }
@@ -37,287 +31,44 @@ header > img{
     padding: 10px 0 0 100px;
 }
 
-/* ----- estilos del textarea que recibe los valores ----------- */
-
-
+main{
+    display: flex;
+    justify-content: center ;
+}
 
 .container{
+    max-width: 1220px;
+    width: 100%;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem;
 }
 
-.form{
+form{
     width: 70%;
 }
 
-
-.defect textarea{
-    display: block;
-    border: none;
+form textarea{
+    width: 70%;
+    border-color: none;
     resize: none;
-    width: 70%;
-    font-size: 30px;
+    padding: 20px 20px;
     background: transparent;
-    display: block;
-    margin: 50px 0 0 50px;
+    font-size: 20px;
+    border: none;
+    transition: all .5s ease;
 }
 
-textarea:focus{
+form textarea:focus{
     outline: none;
-}
-
-/* estilos para la barra lateral o muñeco */
-
-.aside{
-    display: flex;
-    justify-content: center;
-    background: var(--gray-100);
-    padding: 15px;
-    text-align: center;
-    width: 400px;
-    /* padding-top: 140px; */
-    margin-bottom: 30px;
-    border-radius: 40px;
-}
-
-
-.defect{
-    /* width: 65%; */
-    padding-top: 20px;
-}
-
-.aside .defect img{
-    margin-top: 150px;
-    width: 290px;
-    margin-bottom: 30px;
-}
-
-.aside .defect h3{
-    font-size: 25px;
-}
-
-.aside .defect p{
-    margin: 20px 0 140px;
-    font-size: 14px;
-}
-
-/* -------------- estilos de los botones encriptar y desencriptar --------------- */
-#alert{
-    margin-left: 15%;
-    display:flex;
-    justify-content: flex-start;
-    width: 100%;
-    margin-top: 180px;
-    font-size: 12px;
-}
-
-#alert img{
-    float: left;
-    width: 14px;
-    height: 15px;
-    margin-right: 2px;
-}
-
-.buttons{
-    display:flex;
-    justify-content: center;
-    width: 100%;
-}
-
-.buttons input{
-    width: 35%;
-    padding: 20px;
-    margin: 2px 5px;
-    border-radius: 20px;
-    font-size: 18px;
-    font-weight: 500;
-    transition: .5s;
-}
-
-input:hover{
-    transform: scale(.9);
-}
-
-.buttons #encrypt{
-    background-color: var(--gray-400);
-    color: #fff;
-}
-.buttons #decrypt{
-    background-color: var(--gray-200);
-    color: var(--gray-dark);
-    border: 1px solid var(--gray-400);
-}
-.buttons #encrypt:active{
-    background-color: #000;
-    color: var(--gray-100);
-}
-
-.buttons #decrypt:active{
-    background-color: #000;
-    color: var(--gray-100);
-}
-
-/* ------------- estilos para la seccion que muestra el resultado de la encriptación ------------------- */
-
-#salida{
-    font-size: 18px;
-    padding-bottom: 283px;
-}
-
-#hidden{
-    color: #000;
-}
-
-#copy{
-    width: 100%;
-    padding: 20px;
-    margin: 2px 5px;
-    border-radius: 20px;
-    font-size: 18px;
-    font-weight: 500;
-    transition: .5s;
-    background-color: var(--gray-200);
-    color: var(--gray-dark);
-    border: 1px solid var(--gray-400);
-}
-
-#copy:active{
-    background-color: #000;
-    color: var(--gray-100);
-}
-
-/* ------ estilos del pie de pagina ------------ */
-
-
-footer{
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    font-size: 14px;
-    background-color: var(--gray-500);
-    padding: 10px 0;
-}
-
-
-
-.hidden{
-    display: none;
-}
-
-
-/*  ------------------ TABLET DESIGN ---------------------------- */
-@media screen and (max-width: 768px){
-    header img{
-        padding: 20px 0 20px 45px;
-    }
-    .container{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .defect {
-        /* width: 65%; */
-        padding-top: 20px;
-        padding-bottom: 50px;
-        width: 100%;
-    }
-
-    .aside{
-        width: 80%;
-        padding: 0;
-    }
-
-    .aside .defect img{
-        display: none;
-    }
-
-
-    .aside .defect p {
-        margin: 17px 0 0px;
-        font-size: 18px;
-    }
-
-    #salida {
-        font-size: 18px;
-        padding-bottom: 0px;
-    }
-    .defect textarea {
-        width: 80%;
-        font-size: 30px;
-        margin: 0px 0 0 59px;
-    }
-    
-    #copy {
-        width: 81%;
-    }
+    border-color: transparent;
+    border: none;
+    /* box-shadow: 0 0 10px 2px #495057; */
 
 }
 
-@media screen and (max-width: 398px){
-    header img{
-        padding: 10px 0 60px 15px;
-    }
-    .container{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .defect {
-        /* width: 65%; */
-        padding-top: 20px;
-        padding-bottom: 50px;
-        width: 100%;
-    }
-
-    .buttons{
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .aside{
-        width: 80%;
-        padding: 0;
-    }
-
-    .aside .defect img{
-        display: none;
-    }
-
-
-    .aside .defect p {
-        margin: 17px 0 0px;
-        font-size: 14px;
-    }
-
-    #salida {
-        font-size: 14px;
-        padding-bottom: 0px;
-        height: 150px;
-    }
-    .defect textarea {
-        width: 78%;
-        font-size: 30px;
-        margin: 0px 0 0 20px;
-    }
-    
-    .buttons input {
-        width: 80%;
-        padding: 20px;
-        margin: 2px 5px;
-        border-radius: 20px;
-        font-size: 18px;
-        font-weight: 500;
-        transition: .5s;
-    }
-    #copy {
-        width: 81%;
-    }
-
-    footer{
-        text-align: center;
-    }
-
+::placeholder{
+    font-size: inherit;
 }
